@@ -86,6 +86,8 @@
 @media (min-width: 1440px) {
   .navigation {
     padding: 20px 60px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
 
   .menu-button {
@@ -93,8 +95,9 @@
   }
 
   .menu-list-container {
-    display: flex;
-    width: 66%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: space-between;
     background-color: transparent;
@@ -104,11 +107,13 @@
   .menu-list {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 40px;
   }
 
   .menu-list-item {
     padding: 0;
+    display: flex;
   }
 
   .menu-list-item:hover,
@@ -119,6 +124,7 @@
 
   .browse-recipes-button {
     width: auto;
+    justify-self: end;
     padding: 12px 24px;
   }
 }
