@@ -39,6 +39,7 @@ const Navbar = () => {
       <button
         className="menu-button"
         aria-label="Hamburger menu button"
+        aria-expanded={toggleMenu}
         onClick={handleMenuButtonClick}
       >
         <img

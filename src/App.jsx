@@ -5,6 +5,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <main className="main-content">placeholder for main content</main>
     </>
   );
 }

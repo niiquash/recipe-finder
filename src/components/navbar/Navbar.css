@@ -23,6 +23,7 @@
 
 .menu-item-link {
   text-decoration: none;
+  display: block;
   color: #293241;
   line-height: 150%;
   letter-spacing: -0.25px;
@@ -43,13 +44,18 @@
   font-size: 20px;
   line-height: 140%;
   letter-spacing: -0.5px;
+  transition: background-color 0.3s ease;
   cursor: pointer;
+}
+
+.browse-recipes-button:hover {
+  background-color: #395852;
 }
 
 .menu-list-container.is-open {
   display: block;
   position: absolute;
-  top: 100px;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -71,10 +77,48 @@
   .navigation {
     padding: 20px;
   }
+
+  .menu-list-container {
+    width: 704px;
+  }
 }
 
 @media (min-width: 1440px) {
+  .navigation {
+    padding: 20px 60px;
+  }
+
   .menu-button {
     display: none;
+  }
+
+  .menu-list-container {
+    display: flex;
+    width: 66%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .menu-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .menu-list-item {
+    padding: 0;
+  }
+
+  .menu-list-item:hover,
+  .menu-list-item:active {
+    border-bottom: 3px solid #fe9f6b;
+    padding-top: 3px;
+  }
+
+  .browse-recipes-button {
+    width: auto;
+    padding: 12px 24px;
   }
 }
