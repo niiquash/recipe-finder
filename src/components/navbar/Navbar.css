@@ -116,8 +116,12 @@
     display: flex;
   }
 
-  .menu-list-item:hover,
-  .menu-list-item:active {
+  .menu-list-item:hover {
+    border-bottom: 3px solid #fe9f6b;
+    padding-top: 3px;
+  }
+
+  .menu-list-item.active {
     border-bottom: 3px solid #fe9f6b;
     padding-top: 3px;
   }

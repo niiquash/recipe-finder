@@ -2,6 +2,7 @@ import HamburgerIcon from "../../assets/icon-hamburger-menu.svg";
 import Logo from "../../assets/logo.svg";
 import "./Navbar.css";
 import { useState } from "react";
+import { NavLink, Link } from "react-router";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -13,25 +14,40 @@ const Navbar = () => {
 
   return (
     <nav className="navigation">
-      <div className="logo-container">
+      <Link to="/" className="logo-container">
         <img src={Logo} alt="An image of two flower petals." />
-      </div>
+      </Link>
       <div className={`menu-list-container ${toggleMenu ? "is-open" : ""}`}>
         <ul className="menu-list">
           <li className="menu-list-item">
-            <a className="menu-item-link" href="#">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "menu-item-link active" : "menu-item-link"
+              }
+              to="/"
+            >
               Home
-            </a>
+            </NavLink>
           </li>
           <li className="menu-list-item">
-            <a className="menu-item-link" href="#">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "menu-item-link active" : "menu-item-link"
+              }
+              to="/about"
+            >
               About
-            </a>
+            </NavLink>
           </li>
           <li className="menu-list-item">
-            <a className="menu-item-link" href="#">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "menu-item-link active" : "menu-item-link"
+              }
+              to="/recipes"
+            >
               Recipes
-            </a>
+            </NavLink>
           </li>
         </ul>
         <button className="browse-recipes-button">Browse recipes</button>
@@ -42,11 +58,7 @@ const Navbar = () => {
         aria-expanded={toggleMenu}
         onClick={handleMenuButtonClick}
       >
-        <img
-          className="menu-button-icon"
-          src={HamburgerIcon}
-          alt="Three short horizontal lines stacked vertically."
-        />
+        <img className="menu-button-icon" src={HamburgerIcon} alt="" />
       </button>
     </nav>
   );
