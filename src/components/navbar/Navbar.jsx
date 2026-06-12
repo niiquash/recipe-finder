@@ -1,7 +1,7 @@
 import HamburgerIcon from "../../assets/icon-hamburger-menu.svg";
 import Logo from "../../assets/logo.svg";
 import "./Navbar.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router";
 
 const Navbar = () => {
@@ -11,6 +11,17 @@ const Navbar = () => {
     console.log("menu toggled!", toggleMenu);
     setToggleMenu((prevToggleMenu) => !prevToggleMenu);
   }
+
+  useEffect(() => {
+    function handleWindowResize() {
+      if (window.innerWidth > 1440) {
+        setToggleMenu(false);
+      }
+    }
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
 
   return (
     <nav className="navigation">
