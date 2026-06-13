@@ -1,3 +1,64 @@
 .home-page-container {
   height: 100vh;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.hero-section {
+  margin-top: 48px;
+}
+
+.intro-heading {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 110%;
+  letter-spacing: -2px;
+  color: #163a34;
+}
+
+.intro-paragraph {
+  margin-top: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  color: #395852;
+}
+
+.hero-button {
+  margin-top: 32px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 10px;
+  background-color: #163a34;
+  color: #fff;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+
+.hero-image-container {
+  position: relative;
+  margin-top: 40px;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 3.45px #ffffff;
+}
+
+.hero-squiggle {
+  position: absolute;
+  width: 200%;
+  left: -80%;
+  right: -16px;
+  bottom: 5%;
+  transform: rotate(-5deg);
+  z-index: -9;
 }
