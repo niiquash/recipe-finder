@@ -87,7 +87,9 @@ const HomePage = () => {
       </section>
       <section className="action-section">
         <h2>Ready to cook smarter?</h2>
-        <p>Hit the button, pick the table&#8212;fast.</p>
+        <p>
+          Hit the button, pick a recipe, and get dinner on the table&#8212;fast.
+        </p>
         <Link to="/recipes" className="action-button">
           Browse recipes
         </Link>
