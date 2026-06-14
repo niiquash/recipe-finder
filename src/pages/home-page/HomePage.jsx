@@ -1,6 +1,7 @@
 import "./HomePage.css";
 import HomeHeroImage from "/image-home-hero-small.webp";
 import HeroSquiggle from "../../assets/pattern-squiggle-1.svg";
+import { Link } from "react-router";
 const HomePage = () => {
   return (
     <main className="home-page-container">
@@ -11,7 +12,9 @@ const HomePage = () => {
             Discover eight quick whole-food recipes that you can cook
             tonight&#8212;no processed junk, no guesswork.
           </p>
-          <button className="hero-button">Start exploring</button>
+          <Link to="/recipes" className="hero-button">
+            Start exploring
+          </Link>
         </div>
         <div className="hero-image-container">
           <img

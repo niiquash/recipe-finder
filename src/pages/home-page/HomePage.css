@@ -28,6 +28,8 @@
 
 .hero-button {
   margin-top: 32px;
+  text-decoration: none;
+  display: inline-block;
   padding: 16px 32px;
   border: none;
   border-radius: 10px;
@@ -39,7 +41,12 @@
   font-weight: 700;
   line-height: 140%;
   letter-spacing: -0.5px;
+  transition: background-color 0.3s ease;
   cursor: pointer;
+}
+
+.hero-button:hover {
+  background-color: #395852;
 }
 
 .hero-image-container {

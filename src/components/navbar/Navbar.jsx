@@ -98,7 +98,13 @@ const Navbar = () => {
             </NavLink>
           </li>
         </ul>
-        <button className="browse-recipes-button">Browse recipes</button>
+        <Link
+          to="/recipes"
+          className="browse-recipes-button"
+          onClick={handleMenuItemClick}
+        >
+          Browse recipes
+        </Link>
       </div>
       <button
         className="menu-button"
