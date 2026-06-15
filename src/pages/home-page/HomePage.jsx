@@ -5,6 +5,8 @@ import HeroSquiggle from "../../assets/pattern-squiggle-1.svg";
 import NoFuss from "../../assets/icon-minimum-fuss.svg";
 import WholeFoods from "../../assets/icon-whole-food-recipes.svg";
 import Search from "../../assets/icon-search-in-seconds.svg";
+import ForkSquiggle from "../../assets/pattern-fork.svg";
+import KnifeSquiggle from "../../assets/pattern-knife.svg";
 import { Link } from "react-router";
 const HomePage = () => {
   return (
@@ -93,6 +95,8 @@ const HomePage = () => {
         <Link to="/recipes" className="action-button">
           Browse recipes
         </Link>
+        <img className="fork-icon" src={ForkSquiggle} alt="Icon of a fork" />
+        <img className="knife-icon" src={KnifeSquiggle} alt="Icon of a knife" />
       </section>
     </main>
   );

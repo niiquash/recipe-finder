@@ -77,6 +77,7 @@
 ************************************************/
 .benefits-section {
   margin-top: 64px;
+  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -166,8 +167,14 @@
   margin-top: 64px;
   background-color: #e9ede8;
   border-radius: 16px;
-  padding: 48px 16px;
+  padding-top: 48px;
+  padding-bottom: 48px;
   text-align: center;
+}
+
+.fork-icon,
+.knife-icon {
+  display: none;
 }
 
 .action-section h2 {
@@ -210,4 +217,106 @@
 
 .action-button:hover {
   background-color: #395852;
+}
+
+@media (min-width: 768px) {
+  /************************************************
+  * Hero Section
+  ************************************************/
+  .home-page-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .intro-heading {
+    font-size: 64px;
+  }
+
+  .intro-paragraph {
+    font-size: 20px;
+  }
+
+  .hero-image {
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .hero-squiggle {
+    width: 109%;
+    left: -32px;
+    right: -32px;
+    bottom: 30%;
+    transform: rotate(0deg);
+    z-index: -9;
+  }
+  /************************************************
+  * Benefits Section
+  ************************************************/
+  .benefits-section {
+    margin-top: 80px;
+    gap: 48px;
+  }
+
+  .benefits-heading h2 {
+    font-size: 48px;
+  }
+
+  .benefits-content {
+    gap: 32px;
+  }
+
+  .benefits-details p {
+    font-size: 20px;
+  }
+
+  /************************************************
+  * Support Section
+  ************************************************/
+  .support-section {
+    margin-top: 80px;
+    gap: 40px;
+  }
+
+  .support-section-content h2 {
+    font-size: 48px;
+  }
+
+  /************************************************
+  * Action Section
+  ************************************************/
+  .action-section {
+    margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+  }
+
+  .action-section h2 {
+    font-size: 48px;
+  }
+
+  .action-button {
+    margin-top: 40px;
+  }
+
+  .fork-icon,
+  .knife-icon {
+    display: block;
+    position: absolute;
+    width: 170px;
+    height: auto;
+  }
+
+  .fork-icon {
+    top: 50%;
+    left: -6%;
+  }
+
+  .knife-icon {
+    bottom: 68%;
+    right: -2%;
+  }
+}
+
+@media (min-width: 1440px) {
 }
