@@ -64,11 +64,10 @@
 
 .hero-squiggle {
   position: absolute;
-  width: 106%;
+  width: 100vw;
   left: -16px;
-  right: -16px;
+  right: 0px;
   bottom: 30%;
-  transform: rotate(0deg);
   z-index: -9;
 }
 
@@ -77,7 +76,7 @@
 ************************************************/
 .benefits-section {
   margin-top: 64px;
-  padding-bottom: 80px;
+
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -242,18 +241,14 @@
   }
 
   .hero-squiggle {
-    width: 109%;
     left: -32px;
-    right: -32px;
-    bottom: 30%;
-    transform: rotate(0deg);
-    z-index: -9;
   }
   /************************************************
   * Benefits Section
   ************************************************/
   .benefits-section {
     margin-top: 80px;
+    padding-bottom: 80px;
     gap: 48px;
   }
 
@@ -319,4 +314,116 @@
 }
 
 @media (min-width: 1440px) {
+  /************************************************
+  * Hero Section
+  ************************************************/
+
+  .home-page-container {
+    padding-left: 124px;
+    padding-right: 124px;
+  }
+
+  .hero-section {
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .intro-heading {
+    font-size: 72px;
+  }
+
+  .intro-paragraph {
+    margin-top: 12px;
+  }
+
+  .hero-text-wrap {
+    display: block;
+  }
+
+  .hero-button {
+    margin-top: 40px;
+  }
+
+  .hero-image-container {
+    margin-top: 80px;
+  }
+
+  .hero-image {
+    height: auto;
+    box-shadow: 0px 0px 0px 12px #ffffff;
+  }
+
+  .hero-squiggle {
+    left: -124px;
+  }
+
+  /************************************************
+  * Hero Section
+  ************************************************/
+  .benefits-section {
+    margin-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .benefits-heading {
+    text-align: center;
+  }
+
+  .benefits-heading h2 {
+    font-size: 32px;
+  }
+
+  .benefits-content {
+    flex-direction: row;
+  }
+
+  .benefits-details {
+    flex: 1;
+  }
+
+  .benefits-details h3 {
+    margin-top: 24px;
+  }
+
+  /************************************************
+  * Support Section
+  ************************************************/
+  .support-section {
+    flex-direction: row;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .support-section-content,
+  .support-section-image {
+    flex: 1;
+  }
+
+  .support-section h2 {
+    letter-spacing: -3px;
+  }
+
+  /************************************************
+  * Action Section
+  ************************************************/
+  .action-section {
+    margin-top: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .fork-icon,
+  .knife-icon {
+    width: 300px;
+  }
+
+  .fork-icon {
+    top: 10%;
+    left: 0%;
+  }
+
+  .knife-icon {
+    bottom: 10%;
+    right: 0%;
+  }
 }

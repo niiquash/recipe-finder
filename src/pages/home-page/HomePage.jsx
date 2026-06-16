@@ -15,8 +15,10 @@ const HomePage = () => {
         <div className="hero-section-intro">
           <h1 className="intro-heading">Healthy meals. zero fuss</h1>
           <p className="intro-paragraph">
-            Discover eight quick whole-food recipes that you can cook
-            tonight&#8212;no processed junk, no guesswork.
+            Discover eight quick whole-food recipes that you can cook tonight
+            <span className="hero-text-wrap">
+              &#8212;no processed junk, no guesswork.
+            </span>
           </p>
           <Link to="/recipes" className="hero-button">
             Start exploring
