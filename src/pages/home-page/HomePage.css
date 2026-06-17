@@ -162,7 +162,7 @@
 /************************************************
 * Action Section
 ************************************************/
-.action-section {
+/* .action-section {
   margin-top: 64px;
   background-color: #e9ede8;
   border-radius: 16px;
@@ -216,7 +216,7 @@
 
 .action-button:hover {
   background-color: #395852;
-}
+} */
 
 @media (min-width: 768px) {
   /************************************************
@@ -279,7 +279,7 @@
   /************************************************
   * Action Section
   ************************************************/
-  .action-section {
+  /* .action-section {
     margin-top: 80px;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -310,7 +310,7 @@
   .knife-icon {
     bottom: 68%;
     right: -2%;
-  }
+  } */
 }
 
 @media (min-width: 1440px) {
@@ -358,7 +358,7 @@
   }
 
   /************************************************
-  * Hero Section
+  * Benefits Section
   ************************************************/
   .benefits-section {
     margin-top: 96px;
@@ -406,7 +406,7 @@
   /************************************************
   * Action Section
   ************************************************/
-  .action-section {
+  /* .action-section {
     margin-top: 96px;
     padding-top: 96px;
     padding-bottom: 96px;
@@ -425,5 +425,5 @@
   .knife-icon {
     bottom: 10%;
     right: 0%;
-  }
+  } */
 }
