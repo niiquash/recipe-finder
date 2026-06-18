@@ -3,26 +3,36 @@ import OurMissionImage from "/image-about-our-mission-small.webp";
 import BulletPoint from "../../assets/icon-bullet-point.svg";
 import BeyondThePlateImage from "/image-about-beyond-the-plate-small.webp";
 import BrowseRecipes from "../../components/browse-recipes/BrowseRecipes";
+import GreenSuiggle from "../../assets/pattern-squiggle-2.svg";
 
 const AboutPage = () => {
   return (
     <div className="about-page-container">
-      <section>
-        <article>
-          <p>Our mission</p>
+      <section className="about-page-intro">
+        <article className="about-page-intro-text">
+          <span className="mission-heading">Our mission</span>
           <h1>Help more people cook nourishing meals, more often.</h1>
-          <p>
+          <p className="about-intro-p1">
             Healthy Recipe Finder was created to prove that healthy eating can
             be convenient, affordable, and genuinely delicious.
           </p>
-          <p>
+          <p className="about-intro-p2">
             We showcase quick, whole-food dishes that anyone can master&#8212;no
             fancy equipment, no ultra-processed shortcuts&#8212;just honest
             ingredients and straightforward steps.
           </p>
         </article>
-        <div>
-          <img src={OurMissionImage} alt="A woman chopping carrots" />
+        <div className="about-page-intro-image-container">
+          <img
+            className="about-hero-image"
+            src={OurMissionImage}
+            alt="A woman chopping carrots"
+          />
+          <img
+            className="about-squiggly-image"
+            src={GreenSuiggle}
+            alt="Green squiggly line."
+          />
         </div>
       </section>
       <section>
@@ -101,7 +111,7 @@ const AboutPage = () => {
             <article>
               <h3>Sustainable choices.</h3>
               <p>
-                Short ingredient lists cut down on food waste and carbon
+                Short ingredient lists cut down on foo d waste and carbon
                 footprint, while plant-forward dishes keep things
                 planet-friendly.
               </p>
