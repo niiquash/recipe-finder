@@ -1,3 +1,6 @@
+/****************************
+* Mission Section
+****************************/
 .about-page-container {
   padding-left: 16px;
   padding-right: 16px;
@@ -66,4 +69,139 @@
   display: none;
   right: 0;
   bottom: 30%;
+}
+
+/****************************
+* Exist Section
+****************************/
+.exist-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.exist-section h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: -2px;
+  color: #163a34;
+}
+
+.exist-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.exist-bullet-point {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.exist-article h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: -1px;
+}
+
+.exist-article p {
+  margin-top: 12px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  color: #395852;
+}
+
+/****************************
+* Philosophy Section
+****************************/
+.philosophy-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.philosophy-section h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: -2px;
+  color: #163a34;
+}
+
+.philosophy-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.philosophy-bullet-point {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.philosophy-article h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: -1px;
+}
+
+.philosophy-article p {
+  font-family: "Nunito Sans", sans-serif;
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  color: #395852;
+}
+/****************************
+* Beyond Section
+****************************/
+.beyond-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.beyond-article h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: -2px;
+  color: #163a34;
+}
+
+.beyond-section p,
+.beyond-article-list {
+  font-family: "Nunito Sans", sans-serif;
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  color: #395852;
+}
+
+.beyond-article-list {
+  padding-left: 32px;
+}
+
+.beyond-image-container,
+.beyond-image-container img {
+  width: 100%;
+  border-radius: 10px;
 }

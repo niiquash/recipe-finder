@@ -35,12 +35,12 @@ const AboutPage = () => {
           />
         </div>
       </section>
-      <section>
+      <section className="exist-section">
         <h2>Why we exist</h2>
-        <div>
-          <div>
+        <div className="exist-bullets">
+          <div className="exist-bullet-point">
             <img src={BulletPoint} alt="Right arrow" />
-            <article>
+            <article className="exist-article">
               <h3>Cut through the noise.</h3>
               <p>
                 The internet is bursting with recipes, yet most busy cooks still
@@ -50,9 +50,9 @@ const AboutPage = () => {
               </p>
             </article>
           </div>
-          <div>
+          <div className="exist-bullet-point">
             <img src={BulletPoint} alt="Right arrow" />
-            <article>
+            <article className="exist-article">
               <h3>Empower home kitchens.</h3>
               <p>
                 When you control what goes into your meals, you control how you
@@ -61,9 +61,9 @@ const AboutPage = () => {
               </p>
             </article>
           </div>
-          <div>
+          <div className="exist-bullet-point">
             <img src={BulletPoint} alt="Right arrow" />
-            <article>
+            <article className="exist-article">
               <h3>Make healthy look good.</h3>
               <p>
                 High-resolution imagery shows you exactly what success looks
@@ -73,12 +73,12 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="philosophy-section">
         <h2>Our food philosophy</h2>
-        <div>
-          <div>
+        <div className="philosophy-bullets">
+          <div className="philosophy-bullet-point">
             <img src={BulletPoint} alt="Right arrow" />
-            <article>
+            <article className="philosophy-article">
               <h3>Whole ingredients first.</h3>
               <p>
                 Fresh produce, grains, legumes, herbs, and quality fats form the
@@ -86,9 +86,9 @@ const AboutPage = () => {
               </p>
             </article>
           </div>
-          <div>
+          <div className="philosophy-bullet-point">
             <img src={BulletPoint} alt="Right arrow" />
-            <article>
+            <article className="philosophy-article">
               <h3>Flavor without compromise.</h3>
               <p>
                 Spices, citrus, and natural sweetness replace excess salt,
@@ -96,9 +96,9 @@ const AboutPage = () => {
               </p>
             </article>
           </div>
-          <div>
+          <div className="philosophy-bullet-point">
             <img src={BulletPoint} alt="Right arrow" />
-            <article>
+            <article className="philosophy-article">
               <h3>Respect for time.</h3>
               <p>
                 Weeknight meals should slot into real schedules; weekend cooking
@@ -106,9 +106,9 @@ const AboutPage = () => {
               </p>
             </article>
           </div>
-          <div>
+          <div className="philosophy-bullet-point">
             <img src={BulletPoint} alt="Right arrow" />
-            <article>
+            <article className="philosophy-article">
               <h3>Sustainable choices.</h3>
               <p>
                 Short ingredient lists cut down on foo d waste and carbon
@@ -119,14 +119,14 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      <section>
-        <article>
+      <section className="beyond-section">
+        <article className="beyond-article">
           <h2>Beyond the plate</h2>
           <p>
             We believe food is a catalyst for community and well-being. By
             sharing approachable recipes, we hope to:
           </p>
-          <ul>
+          <ul className="beyond-article-list">
             <li>Encourage family dinners and social cooking.</li>
             <li>Reduce reliance on single-use packaging and delivery waste.</li>
             <li>
@@ -134,7 +134,7 @@ const AboutPage = () => {
             </li>
           </ul>
         </article>
-        <div>
+        <div className="beyond-image-container">
           <img src={BeyondThePlateImage} alt="A happy family in the kitchen." />
         </div>
       </section>
