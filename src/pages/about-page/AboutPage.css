@@ -7,7 +7,7 @@
 }
 
 .about-page-intro {
-  margin-top: 48px;
+  padding-top: 48px;
   padding-bottom: 64px;
   display: flex;
   flex-direction: column;
@@ -204,4 +204,47 @@
 .beyond-image-container img {
   width: 100%;
   border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  /****************************
+  * Mission Section
+  ****************************/
+  .about-page-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .about-page-intro {
+    padding-top: 64px;
+    padding-bottom: 80px;
+    gap: 64px;
+  }
+
+  .about-page-intro-text h1 {
+    font-size: 48px;
+  }
+
+  .about-hero-image {
+    border-radius: 24px;
+  }
+
+  /****************************
+  * Exist Section
+  ****************************/
+  .exist-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .exist-section h2 {
+    font-size: 48px;
+  }
+
+  .exist-bullets {
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
 }
