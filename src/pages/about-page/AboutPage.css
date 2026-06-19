@@ -152,7 +152,7 @@
 
 .philosophy-article h3 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 130%;
   letter-spacing: -1px;
 }
@@ -243,6 +243,40 @@
 
   .exist-bullets {
     gap: 32px;
+  }
+
+  /****************************
+  * Philosophy Section
+  ****************************/
+  .philosophy-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .philosophy-section h2 {
+    font-size: 48px;
+  }
+
+  .philosophy-bullets {
+    gap: 32px;
+  }
+
+  /****************************
+  * Beyond Section
+  ****************************/
+  .beyond-section {
+    padding-top: 80px;
+    padding-bottom: 0px;
+    gap: 40px;
+  }
+
+  .beyond-article h2 {
+    font-size: 48px;
+  }
+
+  .beyond-image-container,
+  .beyond-image-container img {
+    border-radius: 20px;
   }
 }
 
