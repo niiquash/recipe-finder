@@ -67,8 +67,8 @@
 .about-squiggly-image {
   position: absolute;
   display: none;
-  right: 0;
-  bottom: 30%;
+  right: -80px;
+  bottom: 18%;
 }
 
 /****************************
@@ -281,4 +281,86 @@
 }
 
 @media (min-width: 1440px) {
+  /****************************
+  * Mission Section
+  ****************************/
+  .about-page-container {
+    padding-left: 124px;
+    padding-right: 124px;
+  }
+
+  .about-page-intro {
+    padding-top: 80px;
+    padding-bottom: 96px;
+    flex-direction: row;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .about-page-intro-text {
+    flex: 1;
+  }
+
+  .about-page-intro-image-container {
+    flex: 1;
+  }
+
+  .about-squiggly-image {
+    display: block;
+  }
+  /****************************
+  * Exist Section
+  ****************************/
+  .exist-section {
+    flex-direction: row;
+    gap: 64px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .exist-section h2 {
+    flex: 1;
+  }
+
+  .exist-bullets {
+    flex: 2;
+    gap: 48px;
+  }
+
+  /****************************
+  * Philosophy Section
+  ****************************/
+  .philosophy-section {
+    flex-direction: row;
+    gap: 64px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .philosophy-section h2 {
+    flex: 1;
+  }
+
+  .philosophy-bullets {
+    flex: 2;
+    gap: 48px;
+  }
+
+  /****************************
+  * Beyond Section
+  ****************************/
+  .beyond-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    flex-direction: row;
+    gap: 64px;
+  }
+
+  .beyond-article {
+    flex: 1;
+  }
+
+  .beyond-image-container {
+    flex: 2;
+  }
 }
