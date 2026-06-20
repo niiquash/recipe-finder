@@ -1,3 +1,9 @@
-.recipe-page-container {
-  height: 100vh;
+.recipe-page {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.recipe-page-heading {
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
