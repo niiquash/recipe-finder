@@ -17,58 +17,40 @@ const RecipesPage = () => {
           catch your eye.
         </p>
       </section>
-      <section>
-        <div>
-          <div>
-            <select name="prep-time" id="prep-time-select">
-              <option value="">Max Prep Time</option>
-              <option value="0">0 minutes</option>
-              <option value="5">5 minutes</option>
-              <option value="10">10 minutes</option>
-            </select>
-            <select name="cook-time" id="cook-time-select">
-              <option value="">Max Cook Time</option>
-              <option value="0">0 minutes</option>
-              <option value="5">5 minutes</option>
-              <option value="10">10 minutes</option>
-              <option value="10">15 minutes</option>
-              <option value="10">20 minutes</option>
-            </select>
-          </div>
-          <div>
-            <img src={Search} alt="A magnifying glass" />
-            <input
-              type="search"
-              placeholder="Search by name or ingredient..."
-            />
-          </div>
-        </div>
-        <div>
-          <div>
-            <div>
-              <img src={ChickpeaSalad} alt="Mediterranean chickpea salad." />
-              <div>
+      <section className="recipes-container">
+        <div className="recipe-card">
+          <div className="recipe-image-details-and-button">
+            <div className="recipe-image-and-details">
+              <img
+                className="recipe-image"
+                src={ChickpeaSalad}
+                alt="Mediterranean chickpea salad."
+              />
+              <div className="recipe-details">
                 <h2>Mediterranean Chickpea Salad</h2>
                 <p>
                   A refreshing, protein-packed salad tossed in a lemon-olive oil
                   dressing.
                 </p>
-                <div>
-                  <span>
-                    <img src={Servings} alt="Icon of a person." /> Serving: 2
-                  </span>
-                  <span>
+                <div className="recipe-yield">
+                  <div className="recipe-yield-item">
+                    <img src={Servings} alt="Icon of a person." />
+                    <span>Serving: 2</span>
+                  </div>
+                  <div className="recipe-yield-item">
                     <img src={PrepTime} alt="Icon of a clock." />
-                    Prep: 10 mins
-                  </span>
-                  <span>
+                    <span>Prep: 10 mins</span>
+                  </div>
+                  <div className="recipe-yield-item">
                     <img src={CookTime} alt="Icon of a platter." />
-                    Cook: 0 min
-                  </span>
+                    <span>Cook: 0 min</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <a href="#">View Recipe</a>
+            <a className="recipe-button" href="#">
+              View Recipe
+            </a>
           </div>
         </div>
       </section>
