@@ -44,17 +44,6 @@
   gap: 12px;
 }
 
-.yield-selections {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.prep-time-container,
-.cook-time-container {
-}
-
 .prep-time-button,
 .cook-time-button {
   border: 1px solid #e0e6e3;
@@ -82,6 +71,60 @@
   border: 1px solid #163a34;
 }
 
+.yield-selections {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.prep-time-container,
+.cook-time-container {
+  position: relative;
+}
+
+.prep-time-options-and-reset-button,
+.cook-time-options-and-reset-button {
+  /* position: absolute; */
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  padding: 8px;
+  background-color: white;
+  border: 1px solid #d0dcd9;
+  border-radius: 8px;
+}
+
+.prep-time-option,
+.cook-time-option {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.3px;
+}
+
+.prep-time-reset-button,
+.cook-time-reset-button {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  text-align: left;
+  padding: 2px 8px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.3px;
+  cursor: pointer;
+}
+
+/************************
+* Search bar
+************************/
 .search-bar {
   width: 100%;
   position: relative;
