@@ -43,7 +43,6 @@ const Navbar = () => {
 
   useEffect(() => {
     function handleOutsideClick(event) {
-      console.log(menuRef.current.contains(event.target));
       if (toggleMenu && !menuRef.current.contains(event.target)) {
         setToggleMenu(false);
       }

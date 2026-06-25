@@ -2,8 +2,23 @@ import "./RecipePage.css";
 import Search from "../../assets/icon-search.svg";
 import ChevronDown from "../../assets/icon-chevron-down.svg";
 import RecipeCard from "../../components/recipe-card/RecipeCard";
+import { useEffect, useState } from "react";
 
 const RecipesPage = () => {
+  const [prepTimeToggled, setPrepTimeToggled] = useState(false);
+  const [cookTimeToggled, setCookTimeToggled] = useState(false);
+
+  function handleMaxPrepClick() {
+    console.log("Selecting max prep time.");
+    setPrepTimeToggled((prev) => !prev);
+    console.log(prepTimeToggled);
+  }
+  function handleMaxCookClick() {
+    console.log("Selecting max cook time.");
+    setCookTimeToggled((prev) => !prev);
+    console.log(cookTimeToggled);
+  }
+
   return (
     <div className="recipe-page">
       <section className="recipe-page-heading">
@@ -19,11 +34,13 @@ const RecipesPage = () => {
         <div className="yield-selections-and-search-bar">
           <div className="yield-selections">
             <div className="prep-time-container">
-              <button className="prep-time-button">
+              <button onClick={handleMaxPrepClick} className="prep-time-button">
                 Max Prep Time{" "}
                 <img src={ChevronDown} alt="Upside down carat symbol." />
               </button>
-              <div className="prep-time-options-and-reset-button">
+              <div
+                className={`prep-time-options-and-reset-button ${prepTimeToggled ? "yield-menu" : ""}`}
+              >
                 <div className="prep-time-options">
                   <div className="prep-time-option">
                     <input type="radio" name="prep-time" id="0-minutes" />
@@ -44,11 +61,13 @@ const RecipesPage = () => {
               </div>
             </div>
             <div className="cook-time-container">
-              <button className="cook-time-button">
+              <button onClick={handleMaxCookClick} className="cook-time-button">
                 Max Cook Time{" "}
                 <img src={ChevronDown} alt="Upside down carat symbol." />
               </button>
-              <div className="cook-time-options-and-reset-button">
+              <div
+                className={`cook-time-options-and-reset-button ${cookTimeToggled ? "yield-menu" : ""}`}
+              >
                 <div className="cook-time-options">
                   <div className="cook-time-option">
                     <input type="radio" name="cook-time" id="0-minutes" />

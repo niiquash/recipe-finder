@@ -94,6 +94,11 @@
   background-color: white;
   border: 1px solid #d0dcd9;
   border-radius: 8px;
+  display: none;
+}
+
+.yield-menu {
+  display: block;
 }
 
 .prep-time-option,
