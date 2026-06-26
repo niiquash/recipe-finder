@@ -7,16 +7,42 @@ import { useEffect, useRef, useState } from "react";
 const RecipesPage = () => {
   const [prepTimeToggled, setPrepTimeToggled] = useState(false);
   const [cookTimeToggled, setCookTimeToggled] = useState(false);
+  const [maxPrepTime, setMaxPrepTime] = useState(0);
+  const [maxCookTime, setMaxCookTime] = useState(0);
   const prepTimeMenuRef = useRef(null);
   const cookTimeMenuRef = useRef(null);
+
+  console.log(maxPrepTime);
+  console.log(maxCookTime);
 
   function handleMaxPrepClick(event) {
     event.stopPropagation();
     setPrepTimeToggled((prev) => !prev);
   }
+
   function handleMaxCookClick() {
     event.stopPropagation();
     setCookTimeToggled((prev) => !prev);
+  }
+
+  function handleMaxPrepSelect(event) {
+    setMaxPrepTime(parseInt(event.target.value));
+    setPrepTimeToggled(false);
+  }
+
+  function handleMaxCookSelect(event) {
+    setMaxCookTime(parseInt(event.target.value));
+    setCookTimeToggled(false);
+  }
+
+  function clearMaxPrepTime() {
+    setMaxPrepTime(0);
+    setPrepTimeToggled(false);
+  }
+
+  function clearMaxCookTime() {
+    setMaxCookTime(0);
+    setCookTimeToggled(false);
   }
 
   useEffect(() => {
@@ -68,19 +94,43 @@ const RecipesPage = () => {
               >
                 <div className="prep-time-options">
                   <div className="prep-time-option">
-                    <input type="radio" name="prep-time" id="prep-0-minutes" />
+                    <input
+                      type="radio"
+                      name="prep-time"
+                      id="prep-0-minutes"
+                      value={0}
+                      checked={0 === maxPrepTime}
+                      onChange={(e) => handleMaxPrepSelect(e)}
+                    />
                     <label htmlFor="prep-0-minutes">0 minutes</label>
                   </div>
                   <div className="prep-time-option">
-                    <input type="radio" name="prep-time" id="prep-5-minutes" />
+                    <input
+                      type="radio"
+                      name="prep-time"
+                      id="prep-5-minutes"
+                      value={5}
+                      checked={5 === maxPrepTime}
+                      onChange={(e) => handleMaxPrepSelect(e)}
+                    />
                     <label htmlFor="prep-5-minutes">5 minutes</label>
                   </div>
                   <div className="prep-time-option">
-                    <input type="radio" name="prep-time" id="prep-10-minutes" />
+                    <input
+                      type="radio"
+                      name="prep-time"
+                      id="prep-10-minutes"
+                      value={10}
+                      checked={10 === maxPrepTime}
+                      onChange={(e) => handleMaxPrepSelect(e)}
+                    />
                     <label htmlFor="prep-10-minutes">10 minutes</label>
                   </div>
                 </div>
-                <button className="prep-time-reset-button" type="reset">
+                <button
+                  className="prep-time-reset-button"
+                  onClick={clearMaxPrepTime}
+                >
                   Clear
                 </button>
               </div>
@@ -96,27 +146,65 @@ const RecipesPage = () => {
               >
                 <div className="cook-time-options">
                   <div className="cook-time-option">
-                    <input type="radio" name="cook-time" id="0-minutes" />
+                    <input
+                      type="radio"
+                      name="cook-time"
+                      id="0-minutes"
+                      value={0}
+                      checked={0 === maxCookTime}
+                      onChange={(e) => handleMaxCookSelect(e)}
+                    />
                     <label htmlFor="0-minutes">0 minutes</label>
                   </div>
                   <div className="cook-time-option">
-                    <input type="radio" name="cook-time" id="cook-5-minutes" />
+                    <input
+                      type="radio"
+                      name="cook-time"
+                      id="cook-5-minutes"
+                      value={5}
+                      checked={5 === maxCookTime}
+                      onChange={(e) => handleMaxCookSelect(e)}
+                    />
                     <label htmlFor="cook-5-minutes">5 minutes</label>
                   </div>
                   <div className="cook-time-option">
-                    <input type="radio" name="cook-time" id="cook-10-minutes" />
+                    <input
+                      type="radio"
+                      name="cook-time"
+                      id="cook-10-minutes"
+                      value={10}
+                      checked={10 === maxCookTime}
+                      onChange={(e) => handleMaxCookSelect(e)}
+                    />
                     <label htmlFor="cook-10-minutes">10 minutes</label>
                   </div>
                   <div className="cook-time-option">
-                    <input type="radio" name="cook-time" id="cook-15-minutes" />
+                    <input
+                      type="radio"
+                      name="cook-time"
+                      id="cook-15-minutes"
+                      value={15}
+                      checked={15 === maxCookTime}
+                      onChange={(e) => handleMaxCookSelect(e)}
+                    />
                     <label htmlFor="cook-15-minutes">15 minutes</label>
                   </div>
                   <div className="cook-time-option">
-                    <input type="radio" name="cook-time" id="cook-20-minutes" />
+                    <input
+                      type="radio"
+                      name="cook-time"
+                      id="cook-20-minutes"
+                      value={20}
+                      checked={20 === maxCookTime}
+                      onChange={(e) => handleMaxCookSelect(e)}
+                    />
                     <label htmlFor="cook-20-minutes">20 minutes</label>
                   </div>
                 </div>
-                <button className="cook-time-reset-button" type="reset">
+                <button
+                  className="cook-time-reset-button"
+                  onClick={clearMaxCookTime}
+                >
                   Clear
                 </button>
               </div>
