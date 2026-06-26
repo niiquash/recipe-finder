@@ -37,6 +37,7 @@
   flex-direction: column;
   gap: 24px;
 }
+
 .yield-selections-and-search-bar {
   width: 100%;
   display: flex;
@@ -166,4 +167,41 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
+}
+
+@media (min-width: 768px) {
+  /*****************************
+  * Explore Section
+  *****************************/
+  .recipe-page {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .recipe-page-heading {
+    padding-top: 64px;
+  }
+
+  .recipe-page-heading h1 {
+    font-size: 48px;
+  }
+
+  /*****************************
+  * Recipe Yield Section
+  *****************************/
+  .yield-selections-and-search-bar {
+    flex-direction: row;
+  }
+
+  .yield-selections {
+    flex-direction: row;
+    flex: 0 0 3;
+  }
+
+  /************************
+  * Search bar
+  ************************/
+  .search-bar {
+    flex: 0 0 2;
+  }
 }
