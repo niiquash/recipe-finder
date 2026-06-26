@@ -85,7 +85,7 @@
 
 .prep-time-options-and-reset-button,
 .cook-time-options-and-reset-button {
-  /* position: absolute; */
+  position: absolute;
   top: 100%;
   left: 0;
 
@@ -95,6 +95,7 @@
   border: 1px solid #d0dcd9;
   border-radius: 8px;
   display: none;
+  z-index: 999;
 }
 
 .yield-menu {
