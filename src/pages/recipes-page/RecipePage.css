@@ -191,17 +191,50 @@
   *****************************/
   .yield-selections-and-search-bar {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .yield-selections {
     flex-direction: row;
-    flex: 0 0 3;
+  }
+
+  .prep-time-button,
+  .cook-time-button {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1440px) {
+  /*****************************
+  * Explore Section
+  *****************************/
+  .recipe-page {
+    padding-left: 124px;
+    padding-right: 124px;
+  }
+
+  .recipe-page-heading {
+    padding-top: 80px;
+    padding-bottom: 64px;
+    text-align: center;
+  }
+
+  .recipe-page-heading p {
+    padding: 0 234px;
   }
 
   /************************
   * Search bar
   ************************/
   .search-bar {
-    flex: 0 0 2;
+    width: 400px;
+    position: relative;
+  }
+
+  /*****************************
+  * Recipe Container
+  *****************************/
+  .recipes-container {
+    grid-template-columns: repeat(3, 380px);
   }
 }

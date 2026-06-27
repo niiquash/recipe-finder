@@ -1,11 +1,11 @@
 /*****************************
 * Recipes Section
 *****************************/
-.recipes-container {
+/* .recipes-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
+} */
 
 .prep-cook-search-container {
   display: flex;

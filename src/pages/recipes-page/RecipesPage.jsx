@@ -222,6 +222,10 @@ const RecipesPage = () => {
         <div className="recipes-container">
           <RecipeCard />
           <RecipeCard />
+          <RecipeCard />
+          <RecipeCard />
+          <RecipeCard />
+          <RecipeCard />
         </div>
       </section>
     </div>
