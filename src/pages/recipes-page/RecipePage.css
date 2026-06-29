@@ -236,5 +236,6 @@
   *****************************/
   .recipes-container {
     grid-template-columns: repeat(3, 380px);
+    place-content: center;
   }
 }

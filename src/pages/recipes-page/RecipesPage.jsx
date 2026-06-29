@@ -11,9 +11,9 @@ const RecipesPage = () => {
   const [maxCookTime, setMaxCookTime] = useState(0);
   const prepTimeMenuRef = useRef(null);
   const cookTimeMenuRef = useRef(null);
+  const [recipesData, setRecipesData] = useState([]);
 
-  console.log(maxPrepTime);
-  console.log(maxCookTime);
+  console.log(recipesData);
 
   function handleMaxPrepClick(event) {
     event.stopPropagation();
@@ -44,6 +44,24 @@ const RecipesPage = () => {
     setMaxCookTime(0);
     setCookTimeToggled(false);
   }
+
+  useEffect(() => {
+    async function getRecipesData() {
+      try {
+        const response = await fetch("/data.json");
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        setRecipesData(result);
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+
+    getRecipesData();
+  }, []);
 
   useEffect(() => {
     function handleOutsideClick(event) {
