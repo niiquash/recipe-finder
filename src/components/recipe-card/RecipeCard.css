@@ -76,6 +76,7 @@
 .recipe-image-details-and-button {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 16px;
 }
 
@@ -88,6 +89,7 @@
 .recipe-image {
   border-radius: 10px;
   width: 100%;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -104,6 +106,10 @@
   font-weight: 700;
   line-height: 140%;
   letter-spacing: -0.5px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .recipe-details p {
@@ -160,6 +166,11 @@
   .recipe-image {
     border-radius: 10px;
     height: 450px;
-    object-fit: cover;
+  }
+}
+
+@media (min-width: 1440px) {
+  .recipe-image {
+    height: 300px;
   }
 }
