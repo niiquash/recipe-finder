@@ -238,12 +238,10 @@ const RecipesPage = () => {
           </div>
         </div>
         <div className="recipes-container">
-          <RecipeCard />
-          <RecipeCard />
-          <RecipeCard />
-          <RecipeCard />
-          <RecipeCard />
-          <RecipeCard />
+          {recipesData &&
+            recipesData.map((recipedata) => (
+              <RecipeCard key={recipedata.id} {...recipedata} />
+            ))}
         </div>
       </section>
     </div>
