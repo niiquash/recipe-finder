@@ -1,7 +1,7 @@
 import "./AboutPage.css";
-import OurMissionImage from "/image-about-our-mission-small.webp";
+import OurMissionImage from "/images/image-about-our-mission-small.webp";
 import BulletPoint from "../../assets/icon-bullet-point.svg";
-import BeyondThePlateImage from "/image-about-beyond-the-plate-small.webp";
+import BeyondThePlateImage from "/images/image-about-beyond-the-plate-small.webp";
 import BrowseRecipes from "../../components/browse-recipes/BrowseRecipes";
 import GreenSuiggle from "../../assets/pattern-squiggle-2.svg";
 
@@ -23,11 +23,17 @@ const AboutPage = () => {
           </p>
         </article>
         <div className="about-page-intro-image-container">
-          <img
-            className="about-hero-image"
-            src={OurMissionImage}
-            alt="A woman chopping carrots"
-          />
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcSet="/images/image-about-our-mission-large.webp"
+            />
+            <img
+              className="about-hero-image"
+              src={OurMissionImage}
+              alt="A woman chopping carrots"
+            />
+          </picture>
           <img
             className="about-squiggly-image"
             src={GreenSuiggle}
@@ -135,7 +141,16 @@ const AboutPage = () => {
           </ul>
         </article>
         <div className="beyond-image-container">
-          <img src={BeyondThePlateImage} alt="A happy family in the kitchen." />
+          <picture>
+            <source
+              srcSet="/images/image-about-beyond-the-plate-large.webp"
+              media="(min-width: 768px)"
+            />
+            <img
+              src={BeyondThePlateImage}
+              alt="A happy family in the kitchen."
+            />
+          </picture>
         </div>
       </section>
       <BrowseRecipes />

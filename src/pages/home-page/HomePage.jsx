@@ -1,6 +1,6 @@
 import "./HomePage.css";
-import HomeHeroImage from "/image-home-hero-small.webp";
-import SectionImage from "/image-home-real-life-small.webp";
+import HomeHeroImage from "/images/image-home-hero-small.webp";
+import SectionImage from "/images/image-home-real-life-small.webp";
 import HeroSquiggle from "../../assets/pattern-squiggle-1.svg";
 import NoFuss from "../../assets/icon-minimum-fuss.svg";
 import WholeFoods from "../../assets/icon-whole-food-recipes.svg";
