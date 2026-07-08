@@ -2,6 +2,7 @@ import "./RecipeCard.css";
 import Servings from "../../assets/icon-servings.svg";
 import PrepTime from "../../assets/icon-prep-time.svg";
 import CookTime from "../../assets/icon-cook-time.svg";
+import { Link } from "react-router";
 
 const RecipeCard = ({ ...recipedata }) => {
   return (
@@ -39,9 +40,9 @@ const RecipeCard = ({ ...recipedata }) => {
             </div>
           </div>
         </div>
-        <a className="recipe-button" href="#">
+        <Link className="recipe-button" to={`/recipes/${recipedata.slug}`}>
           View Recipe
-        </a>
+        </Link>
       </div>
     </div>
   );
