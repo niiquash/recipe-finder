@@ -1,11 +1,16 @@
 import "./RecipeDetailsPage.css";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams, Link } from "react-router";
+import Servings from "../../assets/icon-servings.svg";
+import PrepTime from "../../assets/icon-prep-time.svg";
+import CookTime from "../../assets/icon-cook-time.svg";
+import BulletPoint from "../../assets/icon-bullet-point.svg";
 
 const RecipeDetailsPage = () => {
   const { slug } = useParams();
   const [recipesData, setRecipesData] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function getRecipesData() {
@@ -18,15 +23,25 @@ const RecipeDetailsPage = () => {
         const result = await response.json();
         const focusRecipe = result.find((recipe) => recipe.slug === slug);
 
+        if (!focusRecipe) {
+          setError(`Recipe with slug "${slug}" not found.`);
+          return;
+        }
+
         setRecipesData(result);
         setSelectedRecipe(focusRecipe);
       } catch (err) {
         console.error(err.message);
+        setError(err.message);
       }
     }
 
     getRecipesData();
   }, [slug]);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   if (!selectedRecipe) {
     return <div>Loading...</div>;
@@ -34,7 +49,62 @@ const RecipeDetailsPage = () => {
 
   return (
     <div className="recipe-details-page">
-      <div>placholder</div>
+      <div className="recipes-nav-and-">
+        <div className="recipes-nav">
+          <Link to="/recipes" className="back-link">
+            Recipes &#47;
+          </Link>
+          <span>{selectedRecipe.title}</span>
+        </div>
+        <div className="selected-recipe-container">
+          <div className="selected-recipe-image-and-details">
+            <picture>
+              <source
+                srcSet={selectedRecipe.image.large}
+                media="(min-width: 768px)"
+              />
+              <img
+                className="selected-recipe-image"
+                src={selectedRecipe.image.small}
+                alt={selectedRecipe.slug}
+              />
+            </picture>
+            <section className="selected-recipe-details">
+              <h1>{selectedRecipe.title}</h1>
+              <p>{selectedRecipe.overview}</p>
+              <div className="recipe-yield">
+                <div className="recipe-yield-item">
+                  <img src={Servings} alt="Icon of a person." />
+                  <span>Serving: {selectedRecipe.servings}</span>
+                </div>
+                <div className="recipe-yield-item">
+                  <img src={PrepTime} alt="Icon of a clock." />
+                  <span>Prep: {selectedRecipe.prepMinutes} mins</span>
+                </div>
+                <div className="recipe-yield-item">
+                  <img src={CookTime} alt="Icon of a platter." />
+                  <span>Cook: {selectedRecipe.cookMinutes} min</span>
+                </div>
+              </div>
+              <article className="selected-recipe-ingredients">
+                <h2>Ingredients:</h2>
+                <ul className="selected-recipe-ingredients-list">
+                  {selectedRecipe.ingredients.map((ingredient, index) => (
+                    <li key={index}>
+                      <img
+                        src={BulletPoint}
+                        alt="right arrow"
+                        className="ingredient-list-arrow"
+                      />
+                      {ingredient}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
       <div>placeholder</div>
     </div>
   );
