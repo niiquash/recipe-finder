@@ -5,10 +5,12 @@ import Servings from "../../assets/icon-servings.svg";
 import PrepTime from "../../assets/icon-prep-time.svg";
 import CookTime from "../../assets/icon-cook-time.svg";
 import BulletPoint from "../../assets/icon-bullet-point.svg";
+import RecipeCard from "../../components/recipe-card/RecipeCard";
 
 const RecipeDetailsPage = () => {
   const { slug } = useParams();
   const [recipesData, setRecipesData] = useState([]);
+  const [randomRecipes, setRandomRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [error, setError] = useState(null);
 
@@ -28,8 +30,19 @@ const RecipeDetailsPage = () => {
           return;
         }
 
+        const filteredRecipes = result.filter((recipe) => recipe.slug !== slug);
+        for (let i = filteredRecipes.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+          [filteredRecipes[i], filteredRecipes[j]] = [
+            filteredRecipes[j],
+            filteredRecipes[i],
+          ];
+        }
+        const randomRecipes = filteredRecipes.slice(0, 3);
+
         setRecipesData(result);
         setSelectedRecipe(focusRecipe);
+        setRandomRecipes(randomRecipes);
       } catch (err) {
         console.error(err.message);
         setError(err.message);
@@ -101,11 +114,34 @@ const RecipeDetailsPage = () => {
                   ))}
                 </ul>
               </article>
+              <article className="selected-recipe-instructions">
+                <h2>Instructions:</h2>
+                <ul className="selected-recipe-instructions-list">
+                  {selectedRecipe.instructions.map((instruction, index) => (
+                    <li key={index}>
+                      <img
+                        src={BulletPoint}
+                        alt="right arrow"
+                        className="ingredient-list-arrow"
+                      />
+                      {instruction}
+                    </li>
+                  ))}
+                </ul>
+              </article>
             </section>
           </div>
         </div>
       </div>
-      <div>placeholder</div>
+      <div className="more-recipes-container">
+        <h2>More recipes</h2>
+        <div className="recipe-cards">
+          {randomRecipes &&
+            randomRecipes.map((recipeData) => (
+              <RecipeCard key={recipeData.id} {...recipeData} />
+            ))}
+        </div>
+      </div>
     </div>
   );
 };
