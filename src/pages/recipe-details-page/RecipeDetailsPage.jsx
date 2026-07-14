@@ -9,7 +9,7 @@ import RecipeCard from "../../components/recipe-card/RecipeCard";
 
 const RecipeDetailsPage = () => {
   const { slug } = useParams();
-  const [recipesData, setRecipesData] = useState([]);
+  // const [recipesData, setRecipesData] = useState([]);
   const [randomRecipes, setRandomRecipes] = useState([]);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [error, setError] = useState(null);
@@ -40,7 +40,7 @@ const RecipeDetailsPage = () => {
         }
         const randomRecipes = filteredRecipes.slice(0, 3);
 
-        setRecipesData(result);
+        // setRecipesData(result);
         setSelectedRecipe(focusRecipe);
         setRandomRecipes(randomRecipes);
       } catch (err) {
@@ -62,77 +62,77 @@ const RecipeDetailsPage = () => {
 
   return (
     <div className="recipe-details-page">
-      <div className="recipes-nav-and-">
+      <div className="recipes-nav-and-selected-recipe-container">
         <div className="recipes-nav">
           <Link to="/recipes" className="back-link">
             Recipes &#47;
           </Link>
-          <span>{selectedRecipe.title}</span>
+          <span> {selectedRecipe.title}</span>
         </div>
-        <div className="selected-recipe-container">
-          <div className="selected-recipe-image-and-details">
-            <picture>
-              <source
-                srcSet={selectedRecipe.image.large}
-                media="(min-width: 768px)"
-              />
-              <img
-                className="selected-recipe-image"
-                src={selectedRecipe.image.small}
-                alt={selectedRecipe.slug}
-              />
-            </picture>
-            <section className="selected-recipe-details">
-              <h1>{selectedRecipe.title}</h1>
-              <p>{selectedRecipe.overview}</p>
-              <div className="recipe-yield">
-                <div className="recipe-yield-item">
-                  <img src={Servings} alt="Icon of a person." />
-                  <span>Serving: {selectedRecipe.servings}</span>
-                </div>
-                <div className="recipe-yield-item">
-                  <img src={PrepTime} alt="Icon of a clock." />
-                  <span>Prep: {selectedRecipe.prepMinutes} mins</span>
-                </div>
-                <div className="recipe-yield-item">
-                  <img src={CookTime} alt="Icon of a platter." />
-                  <span>Cook: {selectedRecipe.cookMinutes} min</span>
-                </div>
+
+        <div className="selected-recipe-image-and-details">
+          <picture>
+            <source
+              srcSet={selectedRecipe.image.large}
+              media="(min-width: 768px)"
+            />
+            <img
+              className="selected-recipe-image"
+              src={selectedRecipe.image.small}
+              alt={selectedRecipe.slug}
+            />
+          </picture>
+          <section className="selected-recipe-details">
+            <h1>{selectedRecipe.title}</h1>
+            <p>{selectedRecipe.overview}</p>
+            <div className="recipe-yield">
+              <div className="recipe-yield-item">
+                <img src={Servings} alt="Icon of a person." />
+                <span>Serving: {selectedRecipe.servings}</span>
               </div>
-              <article className="selected-recipe-ingredients">
-                <h2>Ingredients:</h2>
-                <ul className="selected-recipe-ingredients-list">
-                  {selectedRecipe.ingredients.map((ingredient, index) => (
-                    <li key={index}>
-                      <img
-                        src={BulletPoint}
-                        alt="right arrow"
-                        className="ingredient-list-arrow"
-                      />
-                      {ingredient}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-              <article className="selected-recipe-instructions">
-                <h2>Instructions:</h2>
-                <ul className="selected-recipe-instructions-list">
-                  {selectedRecipe.instructions.map((instruction, index) => (
-                    <li key={index}>
-                      <img
-                        src={BulletPoint}
-                        alt="right arrow"
-                        className="ingredient-list-arrow"
-                      />
-                      {instruction}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            </section>
-          </div>
+              <div className="recipe-yield-item">
+                <img src={PrepTime} alt="Icon of a clock." />
+                <span>Prep: {selectedRecipe.prepMinutes} mins</span>
+              </div>
+              <div className="recipe-yield-item">
+                <img src={CookTime} alt="Icon of a platter." />
+                <span>Cook: {selectedRecipe.cookMinutes} min</span>
+              </div>
+            </div>
+            <article className="selected-recipe-ingredients">
+              <h2>Ingredients:</h2>
+              <ul className="selected-recipe-ingredients-list">
+                {selectedRecipe.ingredients.map((ingredient, index) => (
+                  <li key={index}>
+                    <img
+                      src={BulletPoint}
+                      alt="right arrow"
+                      className="ingredient-list-arrow"
+                    />
+                    {ingredient}
+                  </li>
+                ))}
+              </ul>
+            </article>
+            <article className="selected-recipe-instructions">
+              <h2>Instructions:</h2>
+              <ul className="selected-recipe-instructions-list">
+                {selectedRecipe.instructions.map((instruction, index) => (
+                  <li key={index}>
+                    <img
+                      src={BulletPoint}
+                      alt="right arrow"
+                      className="ingredient-list-arrow"
+                    />
+                    {instruction}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </section>
         </div>
       </div>
+
       <div className="more-recipes-container">
         <h2>More recipes</h2>
         <div className="recipe-cards">

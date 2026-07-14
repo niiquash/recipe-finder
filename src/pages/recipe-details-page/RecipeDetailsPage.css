@@ -1,1 +1,135 @@
+.recipe-details-page {
+  padding: 48px 16px;
+}
 
+.recipes-nav-and-selected-recipe-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.recipes-nav {
+  font-size: 18px;
+  font-width: 600;
+  line-height: 150%;
+  letter-spacing: -0.3px;
+  color: #163a34;
+}
+
+.recipes-nav .back-link {
+  text-decoration: none;
+  color: #395852;
+}
+
+.selected-recipe-image-and-details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.selected-recipe-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.selected-recipe-details h1 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: -2px;
+}
+
+.selected-recipe-details p {
+  margin-top: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  color: #395852;
+}
+
+.recipe-yield {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.3px;
+  color: #163a34;
+}
+
+.selected-recipe-ingredients {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.selected-recipe-ingredients h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: -1px;
+  color: #163a34;
+}
+
+.selected-recipe-ingredients ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.selected-recipe-ingredients li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  color: #395852;
+}
+
+.selected-recipe-instructions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.selected-recipe-instructions h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: -1px;
+  color: #163a34;
+}
+
+.selected-recipe-instructions ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.selected-recipe-instructions li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  color: #395852;
+}
+
+.selected-recipe-instructions li:first-child {
+  align-items: flex-start;
+}
